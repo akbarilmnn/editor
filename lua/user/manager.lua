@@ -37,12 +37,12 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/nvim-cmp',
         -- snippet engine
-        'L3MON4D3/LuaSnip'
+        'L3MON4D3/LuaSnip',
+        -- autopairs
+        'windwp/nvim-autopairs'
     }
     
 
     
-
-
 
 end)

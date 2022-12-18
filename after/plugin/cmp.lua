@@ -4,6 +4,13 @@ if (not status) then return end
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 
+-- autopairs
+
+local status, autopairs = pcall(require, "nvim-autopairs")
+if (not status) then return end 
+
+autopairs.setup{}
+
 cmp.setup({
     
     snippet = {
