@@ -49,7 +49,10 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
     }
-
+   
+    -- A line to see indentation 
+    -- good way to navigate nested code blocks
+    use 'lukas-reineke/indent-blankline.nvim'
     
 
 end)

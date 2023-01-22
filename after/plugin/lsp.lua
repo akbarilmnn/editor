@@ -36,8 +36,38 @@ nvim_lsp.denols.setup {
     root_dir = util.root_pattern("deps.ts"),
 }
 
+nvim_lsp.clangd.setup{
+    on_attach = on_attach,
+}
 
 nvim_lsp.sumneko_lua.setup {
     on_attach = on_attach, 
+}
+
+nvim_lsp.emmet_ls.setup {
+    on_attach = on_attach,
+    root_dir = util.root_pattern("*.html"),
+}
+
+nvim_lsp.svelte.setup {
+    on_attach = on_attach,
+}
+
+nvim_lsp.marksman.setup {
+    on_attach = on_attach,
+}
+
+nvim_lsp.cssls.setup {
+    on_attach = on_attach,
+    root_dir = util.root_pattern("*.scss")
+}
+
+nvim_lsp.tailwindcss.setup {
+    on_attach = on_attach,
+}
+
+nvim_lsp.zls.setup {
+    on_attach = on_attach,
+    root_dir = util.root_pattern("*.zig"),
 }
 

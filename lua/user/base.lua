@@ -2,7 +2,7 @@ local set = vim.opt
 -- notification
 --vim.notify = require("notify")
 
-vim.opt.guicursor = ""
+set.guicursor = ""
 
 set.expandtab = true
 set.smarttab = true
@@ -32,4 +32,8 @@ set.cursorline = true
 set.hidden = true
 set.number = true
 set.guifont = "monospace:h17"
+
+-- to make clipboard support possible
+set.clipboard = "unnamedplus"
+
 
