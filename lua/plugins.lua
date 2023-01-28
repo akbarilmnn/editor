@@ -17,14 +17,22 @@ packer.init {
 packer.startup(function(use)
     -- packer to install plugins
     use 'wbthomason/packer.nvim'
+    -- i dont use these colorscheme theme any more
     -- base16 themes for neovim
-    use 'RRethy/nvim-base16'
+    -- use 'RRethy/nvim-base16'
+
+    use 'Morhetz/gruvbox'
+
     -- status line for neovim
     use 'nvim-lualine/lualine.nvim'
     -- web dev icons
     use 'kyazdani42/nvim-web-devicons'
     -- autobrackets
-    use 'windwp/nvim-autopairs'
+    use {
+        'windwp/nvim-autopairs',
+        'windwp/nvim-ts-autotag'
+    }
+
     -- LSP
     use {
         'neovim/nvim-lspconfig',
@@ -39,6 +47,12 @@ packer.startup(function(use)
         'L3MON4D3/LuaSnip',
     }
 
+    -- language server installer
+    use {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim'
+    }
+
     -- syntax highlighting
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -51,5 +65,9 @@ packer.startup(function(use)
         'nvim-telescope/telescope.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
     }
+
+    -- buffer line
+    use 'akinsho/nvim-bufferline.lua'
+
 
 end)

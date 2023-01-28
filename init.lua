@@ -3,5 +3,7 @@ require("base")
 require("remap")
 require("plugins")
 
--- use the preffered colorscheme on reload 
-vim.cmd("colorscheme base16-ayu-dark")
+
+
+-- use the preffered colorscheme on reload
+vim.cmd [[colorscheme gruvbox]]

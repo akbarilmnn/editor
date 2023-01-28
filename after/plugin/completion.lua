@@ -12,6 +12,7 @@ local check_backspace = function()
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
+require("luasnip/loaders/from_vscode").lazy_load()
 
 cmp.setup({
     snippet = {
@@ -76,7 +77,7 @@ cmp.setup({
     }
 })
 
---vim.cmd [[
---    set completeopt=menuone,noinsert,noselect
---    highlight! default link CmpItemKind CmpItemMenuDefault
---]]
+vim.cmd [[
+    set completeopt=menuone,noinsert,noselect
+    highlight! default link CmpItemKind CmpItemMenuDefault
+]]
