@@ -38,4 +38,4 @@ set.guifont = "iosevka:h17"
 -- to make clipboard support possible
 set.clipboard = "unnamedplus"
 
-
+vim.o.background = "dark"
