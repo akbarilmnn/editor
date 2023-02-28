@@ -111,5 +111,35 @@ return {
 
             lsp.setup()
         end
-    }
+    },
+    -- line wrapping for school 
+    {
+        "andrewferrier/wrapping.nvim",
+        config = function ()
+            require("wrapping").setup()
+        end
+    },
+    -- leap.nvim to jump into text quickly 
+    {
+        "ggandor/leap.nvim",
+        dependencies = {
+            "tpope/vim-repeat"
+        },
+        config = function() 
+            require('leap').add_default_mappings()
+        end
+    },
+    -- toggle term for using neovide natively on widows sometimes
+    {
+        "akinsho/toggleterm.nvim",
+        version = "*",
+        lazy = true,
+        keys = {
+            -- tr stands for terminal
+            {"<leader>tr", "<cmd>ToggleTerm direction=float<cr>", "toggleterm"},
+        },
+        config = function ()
+            require("toggleterm").setup()
+        end,
+    },
 }
