@@ -21,6 +21,17 @@ return {
             local ts = require("nvim-treesitter.configs")
 
             ts.setup {
+                ensure_installed = {
+                    "c",
+                    "cpp",
+                    "zig",
+                    "rust",
+                    "lua",
+                    "vim",
+                    "html",
+                    "css",
+                    "typescript",
+                },
                 highlight = {
                     enable = true,
                     disable = {},
@@ -73,7 +84,17 @@ return {
             local mason_lspconfig = require("mason-lspconfig")
 
             mason.setup()
-            mason_lspconfig.setup({})
+            mason_lspconfig.setup({
+                ensure_installed = {
+                    "lua_ls",
+                    "rust_analyzer",
+                    "zls",
+                    "emmet_ls",
+                    "cssls",
+                    "denols",
+                    "html",
+                },
+            })
         end
     },
     -- lsp zero 
@@ -129,17 +150,21 @@ return {
             require('leap').add_default_mappings()
         end
     },
+    
+
+
+    -- commented this out because i'm not using neovide anymore
     -- toggle term for using neovide natively on widows sometimes
-    {
-        "akinsho/toggleterm.nvim",
-        version = "*",
-        lazy = true,
-        keys = {
-            -- tr stands for terminal
-            {"<leader>tr", "<cmd>ToggleTerm direction=float<cr>", "toggleterm"},
-        },
-        config = function ()
-            require("toggleterm").setup()
-        end,
-    },
+    --{
+    --    "akinsho/toggleterm.nvim",
+    --    version = "*",
+    --    lazy = true,
+    --    keys = {
+    --        -- tr stands for terminal
+    --        {"<leader>tr", "<cmd>ToggleTerm direction=float<cr>", "toggleterm"},
+    --    },
+    --    config = function ()
+    --        require("toggleterm").setup()
+    --    end,
+    --},
 }
