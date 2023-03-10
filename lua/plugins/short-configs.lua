@@ -1,10 +1,10 @@
 return {
     -- preffered colorscheme 
     {
-        "folke/tokyonight.nvim",
-        config = function()
+        "folke/tokyonight.nvim", 
+        config = function() 
             vim.cmd [[colorscheme tokyonight-night]]
-        end
+        end 
     },
     -- autopairs 
     {
@@ -150,6 +150,13 @@ return {
             require('leap').add_default_mappings()
         end
     },
+    -- gitsigns 
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup()
+        end
+    }
     
 
 
