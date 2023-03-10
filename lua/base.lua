@@ -1,8 +1,9 @@
 local set = vim.opt
--- notification
---vim.notify = require("notify")
+
+vim.cmd("autocmd!")
 
 set.guicursor = ""
+set.cursorline = true
 
 set.expandtab = true
 set.smarttab = true
@@ -11,6 +12,7 @@ set.softtabstop = 4
 set.tabstop = 4
 set.mouse = 'a'
 set.smartindent = true
+set.autoindent = true
 
 set.swapfile = false 
 set.backup = false
@@ -31,9 +33,9 @@ set.termguicolors = true
 set.cursorline = true
 set.hidden = true
 set.number = true
-set.guifont = "monospace:h17"
+set.guifont = "iosevka:h17"
 
 -- to make clipboard support possible
 set.clipboard = "unnamedplus"
 
-
+vim.o.background = "dark"
