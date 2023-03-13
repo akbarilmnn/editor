@@ -156,7 +156,29 @@ return {
         config = function()
             require("gitsigns").setup()
         end
-    }
+    },
+    -- which key to know the keys iam typing 
+    {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            local which_key = require("which-key")
+
+            which_key.setup({})
+
+            which_key.register({
+                ["<leader>g"] = {
+                    name = "interacting with fugitive",
+                    i =  { "<cmd>Git<cr>", "open fugitive"},
+                }
+            })
+        end
+    },
+    -- fugitive a plugin to show git diff and merge conflicts
+    {
+        "tpope/vim-fugitive"
+    },
     
 
 
