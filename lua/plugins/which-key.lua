@@ -34,7 +34,7 @@ return {
                 c = { "<cmd>Telescope grep_string<cr>", "grep the name of the file" },
                 b = { "<cmd>Telescope buffers<cr>", "find all the history of all the buffers" },
                 h = { "<cmd>Telescope help_tags<cr>", "find the help page of nvim commands" },
-            }
+            },
             -- shortcuts for using fugitive.vim 
             ["<leader>g"] = {
                 i = { "<cmd>G<cr>", "shortcut to open fugitive" },
