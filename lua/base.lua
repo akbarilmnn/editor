@@ -1,5 +1,8 @@
 local set = vim.opt
 
+-- set map leader here before lazy loads...
+ vim.g.mapleader = ' '
+
 vim.cmd("autocmd!")
 
 set.guicursor = ""
