@@ -20,12 +20,14 @@ return {
         -- global leeader key configuration 
         -- with default mode is normal mode
         wk.register({
+            -- for moving fast 
             ["<leader>"] = {
                 s = { "<cmd>w<cr>", "short-cut to save file" },
                 q = { "<cmd>wq<cr>", "short-cut to save file and quit" },
                 v = { "<C-v>", "short-cut to go to visual mode" },
                 e = { "<cmd>q!<cr>", "short-cut to save file" },
             },
+            -- shortcuts for using telescope 
             ["<leader>f"] = {
                 f = { "<cmd>Telescope find_files<cr>", "find files using telescope" },
                 s = { "<cmd>Telescope live_grep<cr>", "grep a string using telescope" },
@@ -33,6 +35,11 @@ return {
                 b = { "<cmd>Telescope buffers<cr>", "find all the history of all the buffers" },
                 h = { "<cmd>Telescope help_tags<cr>", "find the help page of nvim commands" },
             }
+            -- shortcuts for using fugitive.vim 
+            ["<leader>g"] = {
+                i = { "<cmd>G<cr>", "shortcut to open fugitive" },
+            }
+
         }, opts)
 
         -- keymap with default configuration mode is insert mode

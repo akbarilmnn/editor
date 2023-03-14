@@ -9,6 +9,11 @@ return {
     {
         "ellisonleao/gruvbox.nvim",
         config = function ()
+            require("gruvbox").setup({
+                italic = false,
+                transparent_mode = true,
+                bold = false,
+            })
             vim.cmd [[colorscheme gruvbox]]
         end
     },
@@ -166,22 +171,5 @@ return {
     -- fugitive a plugin to show git diff and merge conflicts
     {
         "tpope/vim-fugitive"
-    },
-    
-
-
-    -- commented this out because i'm not using neovide anymore
-    -- toggle term for using neovide natively on widows sometimes
-    --{
-    --    "akinsho/toggleterm.nvim",
-    --    version = "*",
-    --    lazy = true,
-    --    keys = {
-    --        -- tr stands for terminal
-    --        {"<leader>tr", "<cmd>ToggleTerm direction=float<cr>", "toggleterm"},
-    --    },
-    --    config = function ()
-    --        require("toggleterm").setup()
-    --    end,
-    --},
+    }, 
 }
