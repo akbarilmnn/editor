@@ -38,10 +38,7 @@ return {
             -- shortcuts for using fugitive.vim 
             ["<leader>g"] = {
                 i = { "<cmd>G<cr>", "shortcut to open fugitive" },
-            }
-
-        }, opts)
-
+            },
         -- keymap with default configuration mode is insert mode
         wk.register({
             ["j"] = {
