@@ -1,3 +1,3 @@
 require("base")
-require("remap")
+-- require("remap")
 require("plugins")
