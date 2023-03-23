@@ -48,4 +48,8 @@ map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- find files with
 map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string in current working directory as you type
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts) -- list open buffers in current neovim instance
-map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- list available help tags
+map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- list available help help_tags
+
+
+
+
