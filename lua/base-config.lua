@@ -3,7 +3,13 @@ local set = vim.opt
 -- set map leader here before lazy loads...
  vim.g.mapleader = ' '
 
+-- hijack netrw 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.cmd("autocmd!")
+
+
 
 set.guicursor = ""
 set.cursorline = true

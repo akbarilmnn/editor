@@ -12,9 +12,8 @@ map('n', '<leader>v', '<C-v>', opts)
 -- just quit
 map('n', '<leader>e', ':q!<CR>', opts)
 
--- i dont use nerd tree anymore i use neo-tree 
--- toggle nerd tree
--- map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
+-- use nerd tree because it can hijack netrw
+map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
 
 -- shitty autopair lol
 map('i', 'jj', '<Esc>', opts)
