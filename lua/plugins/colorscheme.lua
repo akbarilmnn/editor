@@ -2,6 +2,7 @@ return {
     -- using either onedark or tokyonight colorscheme...
     -- source repository
     "navarasu/onedark.nvim",
+    priority = 1000,
     -- initialize 
     config = function()
         require("onedark").setup {
