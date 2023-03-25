@@ -1,7 +1,10 @@
 return {
     -- using either onedark or tokyonight colorscheme...
     -- source repository
+    -- onedark theme for neovim
     "navarasu/onedark.nvim",
+    --  darkplus theme for neovim
+    "martinsione/darkplus.nvim",
     priority = 1000,
     -- initialize 
     config = function()
@@ -14,6 +17,6 @@ return {
         }
 
         -- use onedark when nvim is launched
-        vim.cmd [[ colorscheme onedark]]
+        vim.cmd [[colorscheme darkplus]]
     end
 }
