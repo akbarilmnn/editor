@@ -1,11 +1,18 @@
 return {
-    -- using either onedark or tokyonight colorscheme...
-    -- source repository
+    -- source repositories
     -- onedark theme for neovim
     "navarasu/onedark.nvim",
-    --  darkplus theme for neovim
-    "martinsione/darkplus.nvim",
+    
+    dependencies = {
+        -- for some reason i have to put on a dependencies block or else the colorscheme will not load
+        -- vscode theme for neovim
+        "Mofiqul/vscode.nvim",
+        -- tokyonight theme 
+        "folke/tokyonight.nvim",
+    },
+
     priority = 1000,
+
     -- initialize 
     config = function()
         require("onedark").setup {
@@ -17,6 +24,6 @@ return {
         }
 
         -- use onedark when nvim is launched
-        vim.cmd [[colorscheme darkplus]]
+        vim.cmd[[colorscheme vscode]]
     end
 }
