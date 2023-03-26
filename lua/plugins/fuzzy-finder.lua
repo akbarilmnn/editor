@@ -1,6 +1,7 @@
 return {
     -- source repository 
     "nvim-telescope/telescope.nvim",
+    lazy = true,
     
     -- dependencies 
     -- plenary.nvim 
