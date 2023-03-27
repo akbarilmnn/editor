@@ -1,10 +1,10 @@
 return {
-    -- before installing lspsaga make sure to install tree sitter. Lspsaga needed the markdown and markdown inline syntax 
+    -- before installing lspsaga make sure to install tree sitter. Lspsaga needed the markdown and markdown inline syntax
     -- highlighting and web dev icons
-    -- source github repostory 
+    -- source github repostory
     "glepnir/lspsaga.nvim",
     -- initialize
-    event = "BufRead",
+    event = "LspAttach",
     config = function()
         require("lspsaga").setup({})
     end

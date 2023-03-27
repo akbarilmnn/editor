@@ -68,11 +68,11 @@ return {
             end
 
             -- mappings for diagnostics
-            nmap("<leader>rn", vim.lsp.buf.rename, '[R]e[n]ame');
-            nmap("<leader>ca", vim.lsp.buf.code_action, '[C]ode[A]ction');
-            nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition");
-            nmap("K", vim.lsp.buf.hover, 'Hover Documentation');
-            nmap("gt", vim.lsp.buf.type_definition, "[G]oto [T]ype definition");
+            nmap("<leader>rn", "<cmd>Lspsaga rename<cr>", '[R]e[n]ame');
+            nmap("<leader>ca", "<cmd>Lspsaga code_action<cr>", '[C]ode[A]ction');
+            nmap("gd", "<cmd>Lspsaga goto_definition<cr>", "[G]oto [D]efinition");
+            nmap("K", "<cmd>Lspsaga hover_doc<cr>", 'Hover Documentation');
+            nmap("gt", "<cmd>Lspsaga goto_type_definition<cr>", "[G]oto [T]ype definition");
             nmap("gi", vim.lsp.buf.implementation, "[G]oto [I]mplementation");
             nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences');
 
