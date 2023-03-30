@@ -13,6 +13,7 @@ return {
         -- Snippets
         "L3MON4D3/LuaSnip",
         "rafamadriz/friendly-snippets",
+        "onsails/lspkind.nvim",
         -- Useful status updates for LSP
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
         { "j-hui/fidget.nvim", opts = {} },
@@ -68,14 +69,15 @@ return {
             end
 
             -- mappings for diagnostics
-            nmap("<leader>rn", "<cmd>Lspsaga rename<cr>", '[R]e[n]ame');
-            nmap("<leader>ca", "<cmd>Lspsaga code_action<cr>", '[C]ode[A]ction');
-            nmap("gd", "<cmd>Lspsaga goto_definition<cr>", "[G]oto [D]efinition");
-            nmap("K", "<cmd>Lspsaga hover_doc<cr>", 'Hover Documentation');
-            nmap("gt", "<cmd>Lspsaga goto_type_definition<cr>", "[G]oto [T]ype definition");
-            nmap("gi", vim.lsp.buf.implementation, "[G]oto [I]mplementation");
-            nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences');
+            nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+            nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
+            nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
+            nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+            nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+            nmap('gt', vim.lsp.buf.type_definition, 'Type [D]efinition')
+
+            nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
 
             -- Create a command `:Format` local to the LSP buffer
             vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
@@ -102,6 +104,7 @@ return {
         -- ]]
         local cmp = require 'cmp'
         local luasnip = require 'luasnip'
+        local lspkind = require 'lspkind'
 
         luasnip.config.setup {}
 
@@ -144,6 +147,16 @@ return {
                 { name = 'path' },
                 { name = 'luasnip' },
             },
-        }
+            formatting = {
+                format = lspkind.cmp_format({
+                    mode = 'text_symbol',
+                    maxwidth = 50,
+                    ellipsis_char = "...",
+                    before = function(entry, vim_item)
+                        return vim_item
+                    end
+                })
+            }
+        } 
     end
 }
