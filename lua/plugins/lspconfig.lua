@@ -105,6 +105,7 @@ return {
         local cmp = require 'cmp'
         local luasnip = require 'luasnip'
         local lspkind = require 'lspkind'
+    
 
         luasnip.config.setup {}
 
@@ -113,6 +114,11 @@ return {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
                 end,
+            },
+            -- to make documentation and completion window be curved
+            window = {
+                completion = cmp.config.window.bordered(),
+                documentation = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert {
                 ['<C-d>'] = cmp.mapping.scroll_docs(-4),
