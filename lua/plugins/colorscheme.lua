@@ -1,6 +1,5 @@
 return {
-    -- source repositories
-    -- onedark theme for neovim
+    -- source repositories onedark theme for neovim
     "navarasu/onedark.nvim",
     
     dependencies = {
@@ -9,6 +8,8 @@ return {
         "Mofiqul/vscode.nvim",
         -- tokyonight theme 
         "folke/tokyonight.nvim",
+        -- zenburn theme 
+        "phha/zenburn.nvim",
     },
 
     priority = 1000,
@@ -22,6 +23,8 @@ return {
                 comments = 'none',
             },
         }
+    
+        require("zenburn").setup()
 
         -- use onedark when nvim is launched
         vim.cmd[[colorscheme vscode]]
