@@ -24,7 +24,9 @@ set_keymap('n', '<leader>v', '<C-v>', "short to go to visual mode")
 set_keymap('n', '<leader>e', ':q!<CR>', "shortcut to quit without saving anything")
 
 -- use nerd tree because it can hijack netrw
-set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', "toggle the file tree")
+-- use dired.nvim as a file manager 
+set_keymap('n', '<leader>t', '<cmd>Dired<cr>', "toggle the file tree using dired")
+set_keymap('n', '<leader>te', '<cmd>DiredQuit<cr>', "quit the file tree")
 
 set_keymap('i', 'jj', '<Esc>', "shortcut to normal mode")
 set_keymap('i', 'jk', '<Esc>:',"shortcut to command mode")
